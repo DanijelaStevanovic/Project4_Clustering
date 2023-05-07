@@ -1,40 +1,70 @@
-# mini-project-III
-Repo with the instructions for the Mini Project III.
+# Clustering Project
 
 
-### Topics
-This mini project is dedicated to following topics:
-- Data Wrangling
-- Data Visualization
-- Data Preparation and Feature Engineering
-- Dimensionality Reduction
-- Unsupervised Learning
+## Goal:
 
-### Data
-We will be using old data about different financial transactions. You can download the data from [here](https://drive.google.com/file/d/1zAjnf936aHkwVCq_BmA47p4lpRjyRzMf/view?usp=sharing). The data contains following tables:
+The goal of this mini-project is to create customer segmentation based on demographics and and banking behavior. 
 
-- twm_customer - information about customers
-- twm_accounts - information about accounts
-- twm_checking_accounts - information about checking accounts (subset of twm_accounts)
-- twm_credit_accounts - information about checking accounts (subset of twm_accounts)
-- twm_savings_accounts - information about checking accounts (subset of twm_accounts)
-- twm_transactions - information about financial transactions
-- twm_savings_tran - information about savings transactions (subset of twm_transactions)
-- twm_checking_tran - information about savings transactions (subset of twm_transactions)
-- twm_credit_tran - information about credit checking (subset of twm_transactions)
+## Process
 
 
-### Output
+## 1. Customer demographics. We used customer data from ***twm_customer.csv**
 
-In this miniproject, we will:
 
-1.  create two separate customer segmentations (using clustering) to split them into 3-5 clusters: 
-    - based on demographics (only on the information from twm_customer)
-    - based on their banking behavior. We can take following things into consideration as banking behavior:
-        - do they have savings account? How much do they save?
-        - do they have credit account? How much do they live in debt?
-        - are they making lot of small transactions or few huge ones?
-2. visualize the created clusters using [radar charts](https://plotly.com/python/radar-chart/) and compare them agains each other
-3. visualize segmentations using scatter plot. We will have to use PCA to be able to plot our observations in 2D.
-4. (stretch) visualize in 2D how our clusters are evolving in each iteration of KMeans (for at least 20 iterations).
-    - we will need to create own implementation of kmeans so we can see what is happening with the clusters during the iterations.
+|Process|   Notebook|
+|--------|--------|
+|Data wrangling |***Data_Prep.ipynb***|
+|Feature engineering|***Data_Prep.ipynb***|
+|EDA|***EDA.ipynb***|
+|Data visualization |***EDA.ipynb***|
+|Scaling|***EDA.ipynb***|
+|Dimensionality reduction using Principal Components Analysis |***Clustering.ipynb***|
+|Segmentation with K-means, Hierarchial, and DBSCAN|***Clustering.ipynb***|
+
+
+
+## 2. Banking behavior. We used transaction data from ***twm_transaction.csv**
+
+   
+|Process|   Notebook|
+|--------|--------|
+|Data wrangling |***Data_Prep.ipynb***|
+|Feature engineering|***Data_Prep.ipynb***|
+|EDA|***Data_Prep.ipynb***|
+|Data visualization |***Data_Prep.ipynb***|
+|Scaling|***Data_Prep.ipynb***|
+|Dimensionality reduction using Principal Components Analysis (PCA) |***Clustering.ipynb***|
+|Segmentation with K-means, Hierarchial, and DBSCAN|***Clustering.ipynb***|
+  
+
+## Results
+
+**Demographic results.**
+We derived three segmentations using K-means. The results were the same before and after dimensionality reduction with PCA. The elbow rule and shilouette coefficients were used to evaluate optimal number of clusters are appropiate for the dataset.
+A radar plot of the clusters are depicted below. 
+
+![K-means clustering](Images/Clusters_cutomer.png)
+
+
+![Radar plot of the clusters](Images/Radar_customer.png)
+
+
+**Banking behavior.**
+Our analaysis focused on clustering customers based on transaction behavior — are they making lot of small transactions or few huge ones?
+After evaluation of K-means, Agglomerative, and DBSCAN results, we concluded that K-means gave the best clustering of three clusters after PCA.
+A cluster plot is depicted below
+
+![K-mean cluster of transactions](Images/K-mean_transactions.png)
+
+![Agglomerative cluster of transactions](Images/Agglomerative.png)
+
+![DBSCAN cluster of transactions](Images/DBSCAN-transactions.png)
+
+
+## Challenges
+PCA algorithm has a steep learning curve. It was challenging to make clusters after dimensionality reduction with PCA.
+Becuse we had only two features for banking bahavior, radar plots were not comprehsnsible. A more easier visual would be to make a bar plot, but we couldnt easily plot after clustering.  
+
+## Future Work
+Learn more tools and plotting techniques. 
+More projects with PCA and different dimensionality reduction techniques to accquire fluency and confidence in executing them. 
