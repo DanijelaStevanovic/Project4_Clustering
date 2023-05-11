@@ -47,9 +47,16 @@ _In the transactions folder_
 
 Highlights:
 
-We derived three segmentations using K-means. Demographically, the first cluster is young and low income; cluster 2 is older and middle income, cluster three is mostly middle age and high income.
+We derived three segmentations using K-means. 
+- The first cluster is young and low income; 
+- Cluster 2 is older and middle income, 
+- Cluster three is mostly middle age and high income.
 
-After dimensionality reduction with PCA and using the first two principal components, the the optimal clustering was 4. The first segmentation, cluster 0 is mainly middle aged and high income. Cluster 1 is young low income earners. Cluster 2 is middle aged and average income. Cluster 3 is the oldest and middle income class.
+After dimensionality reduction with PCA and using the first two principal components, the the optimal clustering was 4. 
+- The first segmentation, cluster 0 is mainly middle aged and high income. 
+- Cluster 1 is young low income earners. 
+- Cluster 2 is middle aged and average income. 
+- Cluster 3 is the oldest and middle income class.
 
 Other clustering methods were employed during this exercise, the results can be found in the appropriate notebook(s).
 
