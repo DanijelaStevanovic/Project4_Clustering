@@ -88,10 +88,17 @@ Other clustering methods were employed during this exercise, the results can be 
 
 Analysis focused on segmenting customers based on transaction behaviour — are they making lot of small transactions or few huge ones?
 
-Before dimensionality reduction with PCA, we derived three clusters. The first segment (cluster 0) is customers making high numbers of huge transactions. The second segment (cluster 1) are customers making few small transactions. The third segment (cluster 2) are customers making average (number and total) transactions.
+Before dimensionality reduction with PCA, we derived three clusters. 
+- The first segment (cluster 0) is customers making high numbers of huge transactions. 
+- The second segment (cluster 1) are customers making few small transactions. 
+- The third segment (cluster 2) are customers making average (number and total) transactions.
 
 After PCA reduction and using the first two principal components.
-There were four segments. The first segment (cluster 0) are customers making small few transactions. The second segment (cluster 1) are customers making large many transactions. The third segment (cluster 2) are customers making many small transactions. The fourth segment (cluster 3) are customers few small transactions but paying the highest interest on transactions.
+There were four segments. 
+- The first segment (cluster 0) are customers making small few transactions. 
+- The second segment (cluster 1) are customers making large many transactions. 
+- The third segment (cluster 2) are customers making many small transactions. 
+- The fourth segment (cluster 3) are customers few small transactions but paying the highest interest on transactions.
 
 A cluster plot is depicted below
 
